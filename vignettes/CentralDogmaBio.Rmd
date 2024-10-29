@@ -9,7 +9,6 @@ vignette: >
 
 https://github.com/rforbiodatascience24/group_19_package
 
-This package...
 
-Function one makes a DNA string of random sequence with the input length. The output is string. Function two takes a DNA sequence and converts it to an RNA sequence. Both the input and the output is a string. Function three takes a nucleotide sequence and converts it into codons. The output conists of substrings containing the codons.
-jj
+
+Function one makes a DNA string of random sequence with the input length. The output is string. Function two takes a DNA sequence and converts it to an RNA sequence. Both the input and the output is a string. Function three takes a nucleotide sequence and converts it into codons. The output consists of substrings containing the codons. Function four translates codons into amino acids. The function returns a string. Function five takes the string from function four and into unique characters. It then counts the unique characters. At last, it then returns a bar plot of the counts of the unique characters (amino acids).
