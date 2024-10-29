@@ -12,3 +12,4 @@ https://github.com/rforbiodatascience24/group_19_package
 This package...
 
 Function one makes a DNA string of random sequence with the input length. The output is string. Function two takes a DNA sequence and converts it to an RNA sequence. Both the input and the output is a string. Function three takes a nucleotide sequence and converts it into codons. The output conists of substrings containing the codons.
+jj
