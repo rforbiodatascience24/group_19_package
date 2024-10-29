@@ -10,4 +10,3 @@ library(testthat)
 library(CentralDogmaBio)
 
 test_check("CentralDogmaBio")
-
