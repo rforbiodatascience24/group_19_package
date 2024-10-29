@@ -37,9 +37,9 @@ create_DNA_string <- function(length_of_DNA_string){
 
 2.  DNA_to_RNA
 
-Description: Converts a DNA sequence to an RNA sequence.
+**Description**: Converts a DNA sequence to an RNA sequence.
 
-Usage:
+**Usage**:
 
 ```{r}
 # Convert a DNA sequence to RNA
@@ -48,7 +48,7 @@ print(rna_sequence)
 
 ```
 
-Code:
+**Code**:
 
 ```{r}
 DNA_to_RNA <- function(DNA_string){
@@ -59,9 +59,9 @@ DNA_to_RNA <- function(DNA_string){
 
 3.  extract_codons
 
-Description: Converts a nucleotide sequence into codons.
+**Description**: Converts a nucleotide sequence into codons.
 
-Usage:
+**Usage**:
 
 ```{r}
 # Extract codons from the RNA sequence
@@ -70,7 +70,7 @@ print(codons)
 
 ```
 
-Code:
+**Code**:
 
 ```{r}
 extract_codons <- function(sequence, start = 1){
@@ -84,9 +84,9 @@ extract_codons <- function(sequence, start = 1){
 
 4.  translate_codons
 
-Description: Translates codons into amino acids
+**Description**: Translates codons into amino acids
 
-Usage:
+**Usage**:
 
 ```{r}
 # Translate codons to amino acids
@@ -94,7 +94,7 @@ amino_acid_sequence <- translate_codons(codons)
 print(amino_acid_sequence)  # e.g., "SYT"
 ```
 
-Code:
+**Code**:
 
 ```{r}
 translate_codons <- function(codons){
@@ -105,16 +105,16 @@ translate_codons <- function(codons){
 
 5.  extract_char
 
-Description: Analyzes the frequency of unique characters (amino acids) in a given sequence and creates a bar plot.
+**Description**: Analyzes the frequency of unique characters (amino acids) in a given sequence and creates a bar plot.
 
-Usage:
+**Usage**:
 
 ```{r}
 # Analyze character counts in a DNA sequence
 extract_char(dna_sequence)
 ```
 
-Code:
+**Code**:
 
 ```{r}
 extract_char <- function(split_char) {
