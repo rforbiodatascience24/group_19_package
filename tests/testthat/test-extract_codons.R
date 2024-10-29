@@ -11,3 +11,5 @@ test_that("extract_codons function handles edge cases and incomplete codons corr
   result <- extract_codons("ATG")
   expect_equal(result, c("ATG"), label = "Single codon test failed")
 })
+
+Hello
