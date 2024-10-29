@@ -15,5 +15,3 @@ extract_codons <- function(sequence, start = 1){
                       last = seq(from = 3+start-1, to = sequence_length, by = 3))
   return(codons)
 }
-
-
