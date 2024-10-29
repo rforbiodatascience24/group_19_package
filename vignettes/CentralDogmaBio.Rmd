@@ -1,5 +1,5 @@
 ---
-title: "CentralDogmaBio"
+title: "CentralDogmaBio: DNA Sequence Analysis Package Vignette"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{CentralDogmaBio}
@@ -7,10 +7,169 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-https://github.com/rforbiodatascience24/group_19_package
+Link to Git: <https://github.com/rforbiodatascience24/group_19_package>
 
+The package CentralDogmaBio provides a set of tools to make work with DNA sequences easier. It allows users to create random DNA sequences, convert them into RNA sequences, extract codons, translate the codons into amino acids, and visualize amino acid counts in any given sequence.
 
+## Functions and Examples
 
-Function one makes a DNA string of random sequence with the input length. The output is string. Function two takes a DNA sequence and converts it to an RNA sequence. Both the input and the output is a string. Function three takes a nucleotide sequence and converts it into codons. The output consists of substrings containing the codons. Function four translates codons into amino acids. The function returns a string. Function five takes the string from function four and into unique characters. It then counts the unique characters. At last, it then returns a bar plot of the counts of the unique characters (amino acids).
+1.  create_DNA_string
 
-test
+**Description**: Generates a DNA string of random sequence with the input length.
+
+**Usage**:
+
+```{r}
+# Create a random DNA sequence of length 10
+dna_sequence <- create_DNA_string(10)
+print(dna_sequence) 
+```
+
+**Code**:
+
+```{r}
+create_DNA_string <- function(length_of_DNA_string){
+  DNA_string_list <- sample(c("A", "T", "G", "C"), size = length_of_DNA_string, replace = TRUE)
+  DNA_string <- paste0(DNA_string_list, collapse = "")
+  return(DNA_string)
+}
+```
+
+2.  DNA_to_RNA
+
+Description: Converts a DNA sequence to an RNA sequence.
+
+Usage:
+
+```{r}
+# Convert a DNA sequence to RNA
+rna_sequence <- DNA_to_RNA(DNA_string)
+print(rna_sequence)  
+
+```
+
+Code:
+
+```{r}
+DNA_to_RNA <- function(DNA_string){
+  RNA_string <- gsub("T", "U", DNA_string)
+  return(RNA_string)
+}
+```
+
+3.  extract_codons
+
+Description: Converts a nucleotide sequence into codons.
+
+Usage:
+
+```{r}
+# Extract codons from the RNA sequence
+codons <- extract_codons(RNA_string)
+print(codons)
+
+```
+
+Code:
+
+```{r}
+extract_codons <- function(sequence, start = 1){
+  sequence_length <- nchar(sequence)
+  codons <- substring(sequence,
+                      first = seq(from = start, to = sequence_length-3+1, by = 3),
+                      last = seq(from = 3+start-1, to = sequence_length, by = 3))
+  return(codons)
+}
+```
+
+4.  translate_codons
+
+Description: Translates codons into amino acids
+
+Usage:
+
+```{r}
+# Translate codons to amino acids
+amino_acid_sequence <- translate_codons(codons)
+print(amino_acid_sequence)  # e.g., "SYT"
+```
+
+Code:
+
+```{r}
+translate_codons <- function(codons){
+  amino_acid_sequence <- paste0(codon_table[codons], collapse = "")
+  return(amino_acid_sequence)
+}
+```
+
+5.  extract_char
+
+Description: Analyzes the frequency of unique characters (amino acids) in a given sequence and creates a bar plot.
+
+Usage:
+
+```{r}
+# Analyze character counts in a DNA sequence
+extract_char(dna_sequence)
+```
+
+Code:
+
+```{r}
+extract_char <- function(split_char) {
+  unique_char <- split_char |>
+    stringr::str_split(pattern = stringr::boundary("character"), simplify = TRUE) |>
+    as.character() |>
+    unique()
+
+  counts <- sapply(unique_char, function(amino_acid) stringr::str_count(string = split_char, pattern = amino_acid)) |>
+    as.data.frame()
+  colnames(counts) <- c("Counts")
+  counts[["counts_char"]] <- rownames(counts)
+
+  counts_char_bar <- counts |>
+    ggplot2::ggplot(ggplot2::aes(x = counts_char, y = Counts, fill = counts_char)) +
+    ggplot2::geom_col() +
+    ggplot2::theme_bw() +
+    ggplot2::theme(legend.position = "none")
+
+  return(counts_char_bar)
+}
+```
+
+## Combining Functions
+
+Here is a suggested workflow that uses the functions from the package to go from DNA sequence to visualizing amino acid counts in the RNA translation:
+
+```{r}
+# Generate DNA sequence
+dna_sequence <- create_DNA_string(12)
+
+# Convert DNA to RNA
+rna_sequence <- DNA_to_RNA(dna_sequence)
+
+# Extract codons
+codons <- extract_codons(rna_sequence)
+
+# Translate codons to amino acids
+amino_acid_sequence <- translate_codons(codons)
+print(amino_acid_sequence)
+
+# Visualize character counts in DNA sequence
+extract_char(dna_sequence)
+```
+
+## Use and Future Additions
+
+This package can be applied to:
+
+-   Simulate DNA and RNA sequences for educational purposes
+
+-   Perform basic analyses of sequences to understand base distributions
+
+-   Translate RNA sequences to amino acid sequences (useful in basic bioinformatics)
+
+Future versions could include:
+
+-   More comprehensive error checking for invalid sequences
