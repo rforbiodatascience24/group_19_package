@@ -1,0 +1,30 @@
+Package: CentralDogmaBio
+Type: Package
+Title: CentralDogmaBio
+Version: 0.1.0
+Author: Authors@R:
+  c(person(given = "Ida Sofie",
+           family = "Adrian",
+           role = c("cre"), # There must be a "cre", but there can only be one
+           email = "s243903@dtu.dk"), 
+    person(given = "Mariam",
+           family = "Omarsdottir",
+           role = "aut",
+           email = "s242707@dtu.dk"),
+           person(given = "Mathilde",
+           family = "Larsen",
+           role = "aut",
+           email = "s243633@dtu.dk"),,
+           person(given = "Nina",
+           family = "Zomorrodnia",
+           role = "aut",
+           email = "nzomorrodnia@gmail.com"),
+           person(given = "Victor",
+           family = "Hansen",
+           role = "aut",
+           email = "s243634@dtu.dk"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: This package aims to replicate the central dogma of molecular biology
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
