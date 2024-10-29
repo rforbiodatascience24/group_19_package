@@ -28,3 +28,7 @@ Description: This package aims to replicate the central dogma of molecular biolo
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
