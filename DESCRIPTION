@@ -28,7 +28,12 @@ Description: This package aims to replicate the central dogma of molecular biolo
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.3.2
+Imports: 
+    ggplot2 (>= 3.5.1),
+    stringr (>= 1.5.1)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
