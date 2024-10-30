@@ -10,4 +10,3 @@ translate_codons <- function(codons){
   amino_acid_sequence <- paste0(codon_table[codons], collapse = "")
   return(amino_acid_sequence)
 }
-
