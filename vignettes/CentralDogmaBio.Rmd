@@ -11,6 +11,14 @@ Link to Git: <https://github.com/rforbiodatascience24/group_19_package>
 
 The package CentralDogmaBio provides a set of tools to make work with DNA sequences easier. It allows users to create random DNA sequences, convert them into RNA sequences, extract codons, translate the codons into amino acids, and visualize amino acid counts in any given sequence.
 
+```{r}
+options(bitmapType = "cairo")
+```
+
+```{r}
+library(CentralDogmaBio)
+```
+
 ## Functions and Examples
 
 1.  create_DNA_string
