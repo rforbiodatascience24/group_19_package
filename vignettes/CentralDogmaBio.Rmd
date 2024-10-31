@@ -1,5 +1,11 @@
 ---
-title: "CentralDogmaBio: DNA Sequence Analysis Package Vignette"
+title: "CentralDogmaBio: DNA Sequence Analysis Package Vignette (Group 19)"
+author:
+  - Ida Sofie Adrian <s243903@dtu.dk>
+  - Mariam Omarsdottir <s242707@dtu.dk>
+  - Mathilde Larsen <s243633@dtu.dk>
+  - Nina Zomorrodnia <nzomorrodnia@gmail.com>
+  - Victor Hansen <s243634@dtu.dk>
 output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{CentralDogmaBio}
