@@ -5,21 +5,21 @@ Version: 0.1.0
 Author: Authors@R:
   c(person(given = "Ida Sofie",
            family = "Adrian",
-           role = c("cre"), # There must be a "cre", but there can only be one
+           role = c("cre"), 
            email = "s243903@dtu.dk"), 
     person(given = "Mariam",
            family = "Omarsdottir",
            role = "aut",
            email = "s242707@dtu.dk"),
-           person(given = "Mathilde",
+    person(given = "Mathilde",
            family = "Larsen",
            role = "aut",
-           email = "s243633@dtu.dk"),,
-           person(given = "Nina",
+           email = "s243633@dtu.dk"),
+    person(given = "Nina",
            family = "Zomorrodnia",
            role = "aut",
            email = "nzomorrodnia@gmail.com"),
-           person(given = "Victor",
+    person(given = "Victor",
            family = "Hansen",
            role = "aut",
            email = "s243634@dtu.dk"))
@@ -30,7 +30,8 @@ Encoding: UTF-8
 LazyData: true
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
@@ -38,6 +39,4 @@ RoxygenNote: 7.3.2
 Imports: 
     ggplot2 (>= 3.5.1),
     stringr (>= 1.5.1)
-Suggests: 
-    testthat (>= 3.0.0)
 Config/testthat/edition: 3
