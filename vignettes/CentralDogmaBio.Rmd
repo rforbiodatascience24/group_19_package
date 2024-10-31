@@ -177,3 +177,5 @@ Future versions could include:
 -   Add a function to generate the reverse complement of DNA (for DNA sequence analysis)
 
 -   A function that can add mutations to the DNA you are working with to study mutations
+
+-   A function that detects different mutation types
