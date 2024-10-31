@@ -1,6 +1,6 @@
 ---
 title: "CentralDogmaBio: DNA Sequence Analysis Package Vignette"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{CentralDogmaBio}
   %\VignetteEngine{knitr::rmarkdown}
