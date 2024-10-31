@@ -28,12 +28,10 @@ Description: This package aims to replicate the central dogma of molecular biolo
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-<<<<<<< HEAD
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-=======
 Depends: 
     R (>= 2.10)
 RoxygenNote: 7.3.2
@@ -43,4 +41,3 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
->>>>>>> 8a66a14caa3a990ab8624080b06638f29905ac61
