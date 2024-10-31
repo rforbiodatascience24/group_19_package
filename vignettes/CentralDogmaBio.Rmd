@@ -140,7 +140,7 @@ extract_char <- function(split_char) {
 
 ## Combining Functions
 
-Here is a suggested workflow that uses the functions from the package to go from DNA sequence to visualizing amino acid counts in the RNA translation:
+Here is a workflow that uses the functions from the package to go from DNA sequence to visualizing amino acid counts in the RNA translation:
 
 ```{r}
 # Generate DNA sequence
